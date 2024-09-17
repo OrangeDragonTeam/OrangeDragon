@@ -593,7 +593,6 @@ body {
     z-index: 10;
     overflow-x: hidden;
     overflow-y: hidden;
-    height: calc(100vh - 80px);
 }
 
 .content-contact {
@@ -1053,6 +1052,38 @@ textarea::placeholder {
         transform: translateX(-50%);
         max-height: 200px;
         max-width: none;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1320px) {
+    
+    .navbar {
+        width: 90%;
+    }
+
+    .navbar .contact-btn {
+        display: none;
+    }
+
+    .navbar .logo {
+        position: absolute;
+        left: 0;
+    }
+
+    .navbar .contact-btn {
+        display: none;
+    }
+
+    .nav-links {
+        width: 80%;
+        position: absolute;
+    }
+}
+
+@media screen and (min-width: 1321px) and (max-width: 1800px) {
+    
+    .navbar {
+        width: 90%;
     }
 }
 
