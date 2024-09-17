@@ -343,7 +343,7 @@
         // Conditionally load the video or image based on iOS detection
         if (isIOS()) {
             // If on iOS, display an image instead of the video
-            logoPlaceholder.innerHTML = '<img src="assets/images/logo.png" alt="Logo" />';
+            logoPlaceholder.innerHTML = '<img src="assets/images/logo.png" alt="Logo" onclick="wait_anim_ios();" />';
         } else {
             // Otherwise, display the video
             logoPlaceholder.innerHTML = `
@@ -357,6 +357,12 @@
             setTimeout(function() {
                 window.location.href = "index.html";
             }, 2000); // 2-second delay before redirect
+        }
+         
+         function wait_anim_ios() {
+            setTimeout(function() {
+                window.location.href = "index.html";
+            }, 10); // 2-second delay before redirect
         }
     </script>
 </body>
