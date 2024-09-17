@@ -920,6 +920,7 @@ input::placeholder {
     }
 
     .arrow-down {
+        padding-bottom: 100px;
         animation: arrow-padding 3s ease-in-out infinite;
       }
     
@@ -1098,13 +1099,13 @@ input::placeholder {
 
 @keyframes arrow-padding {
     0% {
-        padding-bottom: 0;
+        padding-bottom: 100px;
     }
     50% {
-        padding-bottom: 30px;
+        padding-bottom: 130px;
     }
     100% {
-        padding-bottom: 0;
+        padding-bottom: 100px;
     }
 }
 
