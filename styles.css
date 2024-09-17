@@ -766,23 +766,6 @@ textarea::placeholder {
     z-index: 1;
 }
 
-.popup-class {
-    background-color: #f0f0f0;
-    border-radius: 10px;
-    padding: 20px;
-}
-
-.popup-title-class {
-    color: #333;
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.popup-content-class {
-    color: #555;
-    font-size: 18px;
-}
-
 @media screen and (max-width: 768px) {
     .nav-links {
         position: absolute;

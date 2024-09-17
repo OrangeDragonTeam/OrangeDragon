@@ -11,6 +11,7 @@
     <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script type="text/javascript">
     (function(){
         emailjs.init({
@@ -262,54 +263,52 @@
         </div>
     </section>
     
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-        
         <script>   
-            emailjs.send("service_dcrurfx", "template_qba6meg", parms).then(
-    function(response) {
-        console.log("SUCCESS!", response.status, response.text);
-        
-        // Show the SweetAlert2 popup
-        Swal.fire({
-            title: 'Message Sent!',
-            text: 'We will respond as soon as possible.',
-            icon: 'success',
-            confirmButtonText: 'OK',
-            customClass: {
-                popup: 'popup-class',
-                title: 'popup-title-class',
-                content: 'popup-content-class',
-            }
-        }).then(function() {
-            // Redirect after the pop-up is closed (or after user presses OK)
-            setTimeout(function() {
-                window.location.href = "index.html";
-            }, 3000); // 2-second delay before redirect
-        });
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    let parms = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        message: document.getElementById("message").value
+    };
 
-        // Clear the input fields
-        document.getElementById("name").value = '';
-        document.getElementById("email").value = '';
-        document.getElementById("message").value = '';
-    },
-    function(error) {
-        console.log("FAILED...", error);
+    emailjs.send("service_dcrurfx", "template_qba6meg", parms).then(
+        function(response) {
+            console.log("SUCCESS!", response.status, response.text);
 
-        // Show an error popup
-        Swal.fire({
-            title: 'Error!',
-            text: 'There was an error sending your message. Please try again.',
-            icon: 'error',
-            confirmButtonText: 'OK',
-            customClass: {
-                popup: 'popup-error-class',
-                title: 'popup-title-class',
-                content: 'popup-content-class',
-            }
-        });
-    }
-);
+            // Show a SweetAlert2 popup for success
+            Swal.fire({
+                title: 'Message Sent!',
+                text: 'We will respond as soon as possible.',
+                icon: 'success',
+                confirmButtonText: 'OK'
+            }).then(function() {
+                // Clear the form fields after the popup is closed
+                document.getElementById("name").value = '';
+                document.getElementById("email").value = '';
+                document.getElementById("message").value = '';
+
+                // Redirect after a delay or after clicking "OK"
+                setTimeout(function() {
+                    window.location.href = "index.html";
+                }, 2000); // 2-second delay before redirect
+            });
+
+        },
+        function(error) {
+            console.log("FAILED...", error);
+
+            // Show a SweetAlert2 popup for error
+            Swal.fire({
+                title: 'Error!',
+                text: 'There was an error sending your message. Please try again.',
+                icon: 'error',
+                confirmButtonText: 'OK'
+            });
+        }
+    );
+});
 
         </script>
         <script>
