@@ -26,6 +26,9 @@
 </head>
 <body>
 
+    <div id="preloader">
+        <img src="assets/images/preloader.gif" alt="Loading..." id="preloader-image">
+    </div>
 <!-- Navbar section -->
 <div class="navbardiv">
     <nav class="navbar">
@@ -314,6 +317,13 @@ navLinks.forEach(link => {
         nav.classList.remove('active');
         burger.classList.remove('active');
     });
+});
+        </script>
+
+        <script>
+            window.addEventListener('load', () => {
+    const preloader = document.getElementById('preloader');
+    preloader.classList.add('hidden');
 });
         </script>
 </body>

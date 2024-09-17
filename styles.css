@@ -20,6 +20,32 @@ body {
     background-color: #fde8cc;
 }
 
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fde8cc; /* You can use any background color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000; /* Ensure it's on top of everything */
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+#preloader img {
+    width: 50%; /* Size of the GIF, adjust as needed */
+    transform: translateX(calc(50% / 2));
+    height: auto;
+}
+
+/* Initially hidden, for smooth disappearance */
+#preloader.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
 /* Navbar styling */
 .navbardiv {
     background-color: #fde8cc; /* Light peach background */
