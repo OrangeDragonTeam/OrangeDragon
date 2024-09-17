@@ -776,7 +776,7 @@ textarea::placeholder {
 @media screen and (max-width: 768px) {
     #preloader img {
         width: 40%;
-        transform: translateX(calc(50% / 2));
+        transform: translateX(calc(40% / 2));
         height: auto;
     }
 
