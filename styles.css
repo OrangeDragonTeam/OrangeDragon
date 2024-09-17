@@ -34,7 +34,7 @@ body {
 }
 
 #preloader img {
-    width: 50%;
+    width: 20%;
     transform: translateX(calc(50% / 2));
     height: auto;
 }
@@ -774,6 +774,12 @@ textarea::placeholder {
 }
 
 @media screen and (max-width: 768px) {
+    #preloader img {
+        width: 40%;
+        transform: translateX(calc(50% / 2));
+        height: auto;
+    }
+
     .nav-links {
         position: absolute;
         flex-direction: column;
