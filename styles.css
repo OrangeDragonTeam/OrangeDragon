@@ -3,13 +3,12 @@
     src: url('assets/fonts/vinque\ rg.otf') format('truetype');
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
-/* General styles */
 * {
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -26,68 +25,65 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #fde8cc; /* You can use any background color */
+    background-color: #fde8cc;
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 10000; /* Ensure it's on top of everything */
+    z-index: 10000;
     transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 
 #preloader img {
-    width: 50%; /* Size of the GIF, adjust as needed */
+    width: 50%;
     transform: translateX(calc(50% / 2));
     height: auto;
 }
 
-/* Initially hidden, for smooth disappearance */
 #preloader.hidden {
     opacity: 0;
     visibility: hidden;
 }
 
-/* Navbar styling */
 .navbardiv {
-    background-color: #fde8cc; /* Light peach background */
+    background-color: #fde8cc;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 80px;
     display: flex;
-    justify-content: center; /* Centers the entire navbar content horizontally */
+    justify-content: center;
     align-items: center;
     padding: 0 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a small shadow below the navbar */
-    z-index: 1000; /* Ensure the navbar stays on top */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
 }
 
 .navbar {
-    background-color: #fde8cc; /* Light peach background */
+    background-color: #fde8cc;
     position: fixed;
     width: 70%;
     height: 80px;
     display: flex;
-    justify-content: center; /* Centers the entire navbar content horizontally */
+    justify-content: center;
     align-items: center;
     padding: 0 20px;
-    z-index: 1000; /* Ensure the navbar stays on top */
+    z-index: 1000;
     font-family: 'DragonFont', sans-serif;
     font-size: 1.2rem;
 }
 
-/* Logo styles */
 .navbar .logo {
     position: absolute;
-    left: 180px; /* Keep the logo on the left side */
+    left: 180px;
 }
 
 .navbar .logo video {
     height: 80px;
     width: auto;
     cursor: pointer;
-    outline: none; /* Removes the default outline */
-    border: none;  /* Ensures no border is applied */
+    outline: none;
+    border: none;
 }
 
 .navbar .logo video:focus {
@@ -95,7 +91,6 @@ body {
     border: none;
 }
 
-/* Links section */
 .navbar ul {
     list-style: none;
     display: flex;
@@ -115,20 +110,19 @@ body {
 }
 
 .navbar ul li a:hover {
-    color: #ff7f00; /* Orange color on hover */
+    color: #ff7f00;
     transition: 0.5s;
 }
 
-/* Contact Us button */
 .navbar .contact-btn {
     width: 180px;
     padding: 10px 30px;
     border-radius: 20px;
     text-decoration: none;
     font-weight: bold;
-    white-space: nowrap; /* Prevent text wrapping */
+    white-space: nowrap;
     position: absolute;
-    right: 0px; /* Keep the button on the right side */
+    right: 0px;
     text-align: center;
     transition: 0.5s;
     background-size: 200% auto;
@@ -145,20 +139,19 @@ body {
 
 .navbar .contact-btn:hover {
     background-position: right center;
-    /* change the direction of the change here */
     text-decoration: none;
-  }
+}
   
-  .navbar .contact-btn:active {
+.navbar .contact-btn:active {
     transform: scale(0.95);
-  }
+}
 
-  .nav-links {
+.nav-links {
     display: flex;
     justify-content: space-around;
     width: 50%;
 }
-/* Burger menu styling */
+
 .burger {
     display: none;
     cursor: pointer;
@@ -173,13 +166,12 @@ body {
     transition: all 0.5s ease;
 }
 
-/* Burger menu transformation for active state */
 .nav-links.active + .burger .line1 {
     transform: rotate(-45deg) translate(-5px, 6px);
 }
 
 .nav-links.active + .burger .line2 {
-    opacity: 0; /* Hide the middle line */
+    opacity: 0;
 }
 
 .nav-links.active + .burger .line3 {
@@ -199,25 +191,23 @@ body {
     margin-top: -80px;
 }
 
-/* Make space for the fixed navbar */
 .content {
-    padding-top: 80px; /* Ensures content doesn't hide under navbar */
+    padding-top: 80px;
 }
 
 .welcome-nav {
     position: absolute;
 }
 
-/* Welcome Section styling */
 .welcome-section {
     position: relative;
     text-align: center;
     padding-top: 80px;
     padding: 20px;
     width: 100%;
-    height: calc(100vh - 80px); /* Full viewport height minus navbar height */
-    overflow: hidden; /* Prevents any overflow issues */
-    z-index: 10; /* Ensures the section stays on top of the background */
+    height: calc(100vh - 80px);
+    overflow: hidden;
+    z-index: 10;
 }
 
 .welcome-section .dragon {
@@ -225,14 +215,14 @@ body {
     margin-top: 40px;
     animation: floatupdown 3s ease-in-out infinite;
     position: relative;
-    z-index: 10; /* Dragon image stays on top of the background elements */
+    z-index: 10;
 }
 
 .welcome-section h1 {
     font-family: 'DragonFont', sans-serif;
     font-size: 2rem;
     position: relative;
-    z-index: 10; /* Text stays on top of the background elements */
+    z-index: 10;
     animation: floatupdown 3s ease-in-out infinite;
     color: #3c3329;
 }
@@ -241,17 +231,15 @@ body {
     display: none;
 }
 
-/* Background Images */
 .back_imgs {
-    position: absolute; /* Allows child elements to be positioned absolutely */
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1; /* Background images stay behind the content */
+    z-index: 1;
 }
 
-/* Left Tail Image */
 .welcome-section .tail1 {
     position: absolute;
     left: 0;
@@ -259,11 +247,10 @@ body {
     max-width: 30%;
     opacity: 0.7;
     animation: floatupdown 4s ease-in-out infinite;
-    z-index: 2; /* Behind dragon and text */
+    z-index: 2;
     transform: translateY(-50%);
 }
 
-/* Right Tail Image */
 .welcome-section .tail2 {
     position: absolute;
     right: 0;
@@ -271,11 +258,10 @@ body {
     max-width: 30%;
     opacity: 0.7;
     animation: floatupdown 4s ease-in-out infinite;
-    z-index: 2; /* Behind dragon and text */
+    z-index: 2;
     transform: translateY(-40%);
 }
 
-/* Left Cloud */
 .welcome-section .cloud1 {
     position: absolute;
     left: 0;
@@ -287,7 +273,6 @@ body {
     z-index: 1;
 }
 
-/* Right Cloud */
 .welcome-section .cloud2 {
     position: absolute;
     right: 0;
@@ -299,7 +284,6 @@ body {
     z-index: 1;
 }
 
-/* Gate Image */
 .welcome-section .gate {
     position: absolute;
     bottom: 0;
@@ -344,22 +328,22 @@ body {
     justify-items: center;
     align-items: center;
     transition: 0.5s;
-  }
+}
 
-  .arrow-down:hover {
+.arrow-down:hover {
     transition: 0.5s;
     padding-bottom: 0px;
-  }
+}
 
-  .arrow-down img {
+.arrow-down img {
     height: 84px;
     width: 84px;
-  }
+}
   
- .about-section {
+.about-section {
     position: relative;
     width: 100%;
-    background-color: #ff7f00; /* Bright orange background */
+    background-color: #ff7f00;
     color: white;
     display: flex;
     flex-direction: column;
@@ -396,7 +380,6 @@ body {
     width: 70%;
 }
 
-/* Carousel Section */
 .about-container-skills {
     position: relative;
     overflow: hidden;
@@ -417,10 +400,9 @@ body {
     justify-content: space-between;
     width: 100%;
     padding-bottom: 5vh;
-    flex-wrap: wrap; /* Allows wrapping of items */
+    flex-wrap: wrap;
 }
 
-/* Individual Carousel Items */
 .skill-item {
     position: relative;
     background: linear-gradient(to right, #ffcc33, #ff9900);
@@ -430,7 +412,7 @@ body {
     flex-direction: column;
     padding: 30px;
     color: #000;
-    flex: 1 1 25%; /* Each item takes 30% of the width */
+    flex: 1 1 25%;
     margin: 3vw;
 }
 
@@ -454,7 +436,7 @@ body {
 .team {
     position: relative;
     width: 100%;
-    background-color: #fde8cc; /* Bright orange background */
+    background-color: #fde8cc;
     color: #ff7f00;
     display: flex;
     flex-direction: column;
@@ -510,7 +492,7 @@ body {
 
 .person{
     position: relative;
-    flex: 1 1 25%; /* Each item takes 30% of the width */
+    flex: 1 1 25%;
     margin: 3vw;
     margin-top: 0;
     box-sizing: border-box;
@@ -536,10 +518,9 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     gap: 8px;
-  }
+}
   
-  /* Variables converted to static values */
-  .social-button {
+.social-button {
     position: relative;
     display: flex;
     justify-content: center;
@@ -552,9 +533,9 @@ body {
     background: #fff;
     text-align: center;
     transition: 0.3s;
-  }
+}
   
-  .social-button::after {
+.social-button::after {
     content: '';
     position: absolute;
     top: -1px;
@@ -564,47 +545,48 @@ body {
     height: 0;
     border-radius: 100%;
     transition: 0.3s;
-  }
+}
   
-  .social-button:focus,
-  .social-button:hover {
+.social-button:focus,
+.social-button:hover {
     color: #fff;
-  }
+}
   
-  .social-button:focus::after,
-  .social-button:hover::after {
+.social-button:focus::after,
+.social-button:hover::after {
     width: calc(100% + 2px);
     height: calc(100% + 2px);
     margin-left: calc(-50% - 1px);
-  }
+}
   
-  .social-button i,
-  .social-button svg {
+.social-button i,
+.social-button svg {
     position: relative;
     z-index: 1;
     transition: 0.3s;
-  }
+}
   
-  .social-button i {
+.social-button i {
     font-size: calc(64px * 0.4);
-  }
+}
   
-  .social-button svg {
+.social-button svg {
     height: 40%;
     width: 40%;
-  }
+}
 
-  .social-button--linkedin {
+.social-button--linkedin {
     color: #0077b5;
-  }
-  .social-button--linkedin::after {
-    background: #0077b5;
-  }
+}
 
-  .contact{
+.social-button--linkedin::after {
+    background: #0077b5;
+}
+
+.contact{
     position: relative;
     width: 100%;
-    background-color: #ff7f00; /* Bright orange background */
+    background-color: #ff7f00;
     color: white;
     display: flex;
     flex-direction: column;
@@ -612,7 +594,7 @@ body {
     overflow-x: hidden;
     overflow-y: hidden;
     height: calc(100vh - 80px);
-  }
+}
 
 .content-contact {
     padding-top: calc(5vh + 80px);
@@ -639,9 +621,9 @@ body {
     display: inline-block;
 }
   
-  .contact-form {
+.contact-form {
     position: relative;
-    background-color: #fde8cc; /* Slightly lighter than the background */
+    background-color: #fde8cc;
     border-radius: 15px;
     padding: 60px;
     width: 30%;
@@ -651,7 +633,6 @@ body {
     margin-bottom: 60px;
 }
 
-/* Form heading */
 .contact-form h2 {
     text-align: center;
     font-size: 1.2rem;
@@ -660,7 +641,6 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-/* Form group styling */
 .form-group {
     margin-bottom: 20px;
 }
@@ -672,20 +652,18 @@ body {
     color: #3c3329;
 }
 
-/* Input and textarea styling */
 .form-group input,
 .form-group textarea {
     width: 100%;
     padding: 10px;
     border: none;
     border-radius: 5px;
-    background-color: #ff7f00; /* Darker input fields */
+    background-color: #ff7f00;
     color: #fff;
     font-size: 1rem;
     transition: all 0.3s ease;
 }
 
-/* Input focus effect */
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
@@ -693,7 +671,6 @@ body {
     box-shadow: 0 0 10px rgba(255, 127, 0, 1);
 }
 
-/* Textarea styling */
 .form-group textarea {
     resize: vertical;
     height: 100px;
@@ -703,18 +680,17 @@ input::placeholder {
     color: #f0f0f0;
     font-size: 1rem;
     opacity: 1;
-  }
+}
   
-  textarea::placeholder {
+textarea::placeholder {
     color: #f0f0f0;
     font-size: 1rem;
     opacity: 1;
-  }
+}
 
-/* Submit Button */
 .btn-submit {
     width: 100%;
-    background-color: #ff7f00; /* Vivid purple */
+    background-color: #ff7f00;
     color: #fff;
     border: none;
     padding: 16px;
@@ -727,12 +703,11 @@ input::placeholder {
 }
 
 .btn-submit:hover {
-    background-color: #b55b00; /* Slightly darker purple on hover */
+    background-color: #b55b00;
     transform: translateY(-4px);
     transition: 0.5s;
 }
 
-/* Message Display */
 #status-message {
     text-align: center;
     font-size: 1rem;
@@ -745,11 +720,11 @@ input::placeholder {
 }
 
 .contact_imgs {
-    position: absolute; /* Allows child elements to be positioned absolutely */
+    position: absolute;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1; /* Background images stay behind the content */
+    z-index: 1;
     overflow-x: hidden;
 }
 
@@ -759,7 +734,7 @@ input::placeholder {
     bottom: 0;
     max-width: 30%;
     animation: floatupdown 4s ease-in-out infinite;
-    z-index: 2; /* Behind dragon and text */
+    z-index: 2;
 }
 
 .contact-gate {
@@ -767,7 +742,7 @@ input::placeholder {
     left: 0;
     bottom: 0;
     max-width: 30%;
-    z-index: 2; /* Behind dragon and text */
+    z-index: 2;
 }
 
 .contact-c1 {
@@ -792,7 +767,6 @@ input::placeholder {
     z-index: 1;
 }
 
-/* Media query for mobile screens */
 @media screen and (max-width: 768px) {
     .nav-links {
         position: absolute;
@@ -807,8 +781,8 @@ input::placeholder {
         transition: max-height 0.5s ease, opacity 0.5s ease;
         overflow: hidden;
         border-radius: 0 0 15px 15px;
-        justify-content: center; /* Keep links centered */
-        align-items: center;     /* Keep links aligned in the center */
+        justify-content: center;
+        align-items: center;
     }
 
     .navbar ul li {
@@ -830,12 +804,12 @@ input::placeholder {
     }
 
     .nav-links.active {
-        display: flex;         /* Maintain flex display */
+        display: flex;
         opacity: 1;
-        max-height: 500px;      /* Expand to fit links */
-        transition: max-height 0.5s ease, opacity 0.5s ease; /* Smooth transition */
-        justify-content: center; /* Keep links centered */
-        align-items: center;     /* Keep links aligned in the center */
+        max-height: 500px;
+        transition: max-height 0.5s ease, opacity 0.5s ease;
+        justify-content: center;
+        align-items: center;
     }
 
     .burger {
@@ -853,7 +827,6 @@ input::placeholder {
         transition: all 0.5s ease;
     }
 
-    /* Transform the lines into an X when the menu is active */
     .burger.active .line1 {
         transform: rotate(-45deg) translate(-5px, 6px);
     }
@@ -868,7 +841,7 @@ input::placeholder {
 
     .navbar .logo {
         position: absolute;
-        left: 0; /* Keep the logo on the left side */
+        left: 0;
     }
 
     .navbar .contact-btn {
@@ -879,28 +852,28 @@ input::placeholder {
         width: 90%;
         height: 80px;
         display: flex;
-        justify-content: center; /* Centers the entire navbar content horizontally */
+        justify-content: center;
         align-items: center;
         padding: 0 20px;
-        z-index: 1000; /* Ensure the navbar stays on top */
+        z-index: 1000;
         font-family: 'DragonFont', sans-serif;
         font-size: 1.2rem;
     }
 
-      .welcome-section .dragon {
+    .welcome-section .dragon {
         max-height: 100%;
         max-width: 50%;
         margin-top: 40px;
         animation: floatupdown 3s ease-in-out infinite;
         position: relative;
-        z-index: 10; /* Dragon image stays on top of the background elements */
+        z-index: 10;
     }
     
     .welcome-section h1 {
         font-family: 'DragonFont', sans-serif;
         font-size: 1.7rem;
         position: relative;
-        z-index: 10; /* Text stays on top of the background elements */
+        z-index: 10;
         animation: floatupdown 3s ease-in-out infinite;
         color: #3c3329;
     }
@@ -910,7 +883,7 @@ input::placeholder {
         font-family: 'DragonFont', sans-serif;
         font-size: 1.3rem;
         position: relative;
-        z-index: 10; /* Text stays on top of the background elements */
+        z-index: 10;
         animation: floatupdown 3s ease-in-out infinite;
         color: #3c3329;
     }
@@ -924,10 +897,10 @@ input::placeholder {
         animation: arrow-padding 3s ease-in-out infinite;
       }
     
-      .arrow-down img {
+    .arrow-down img {
         height: 54px;
         width: 54px;
-      }
+    }
 
     .about-section h1 {
         font-size: 2rem;
@@ -949,7 +922,6 @@ input::placeholder {
         font-weight: 500;
     }
     
-    /* Carousel Section */
     .about-container-skills {
         padding-left: 5%;
         padding-right: 5%;
@@ -1014,15 +986,14 @@ input::placeholder {
         font-size: 1.1rem;
     }
       
-      /* Variables converted to static values */
-      .social-button {
+    .social-button {
         width: 54px;
         height: 54px;
-      }
+    }
     
-.contact {
-    height: auto;
-}
+    .contact {
+        height: auto;
+    }
 
     .content-contact {
         flex-direction: column;
@@ -1044,7 +1015,7 @@ input::placeholder {
         padding-bottom: 20px;
     }
       
-      .contact-form {
+    .contact-form {
         padding: 40px;
         width: 80%;
         margin: 40px auto auto auto;
@@ -1060,13 +1031,13 @@ input::placeholder {
         color: #f0f0f0;
         font-size: 1rem;
         opacity: 1;
-      }
+    }
       
-      textarea::placeholder {
+    textarea::placeholder {
         color: #f0f0f0;
         font-size: 1rem;
         opacity: 1;
-      }
+    }
     
     .contact-dragon {
         left: 50%;
