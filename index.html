@@ -29,9 +29,9 @@
     <div class="navbardiv">
         <nav class="navbar">
             <div class="logo">
-                <video id="logo_anim" onclick="this.play(); wait_anim();">
-                    <source src="assets/images/logo_anim.mp4" type="video/mp4" />
-                </video>
+                <div id="logo-placeholder">
+                
+                </div>
             </div>
 
             <ul class="nav-links">
@@ -330,5 +330,28 @@
                 preloader.classList.add('hidden');
             });
         </script>
+    
+     <script>
+        // Function to detect if the user is on iOS
+        function isIOS() {
+            return /iPhone|iPad|iPod/i.test(navigator.userAgent);
+        }
+
+        // Select the logo placeholder element
+        const logoPlaceholder = document.getElementById("logo-placeholder");
+
+        // Conditionally load the video or image based on iOS detection
+        if (isIOS()) {
+            // If on iOS, display an image instead of the video
+            logoPlaceholder.innerHTML = '<img src="assets/images/logo.png" alt="Logo" />';
+        } else {
+            // Otherwise, display the video
+            logoPlaceholder.innerHTML = `
+                <video id="logo_anim" onclick="this.play(); wait_anim();">
+                    <source src="assets/images/logo_anim.mp4" type="video/mp4" />
+                </video>
+            `;
+        }
+    </script>
 </body>
 </html>

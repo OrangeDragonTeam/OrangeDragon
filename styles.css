@@ -78,6 +78,13 @@ body {
     left: 180px;
 }
 
+.navbar .logo img {
+    height: 80px;
+    width: 80px;
+    outline: none;
+    border: none;
+}
+
 .navbar .logo video {
     height: 80px;
     width: auto;
